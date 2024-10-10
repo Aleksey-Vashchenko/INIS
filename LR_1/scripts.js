@@ -8,7 +8,7 @@ window.onload = function() {
     const closeModal = document.querySelector('.close');
     modal.style.display='none';
 
-    shirts.forEach(shirt => {
+    shirts.forEach((shirt,index) => {
         // Создание карточки для каждой футболки
         const shirtCard = document.createElement('div');
         shirtCard.classList.add('shirt-card');
@@ -57,6 +57,13 @@ window.onload = function() {
             modalShirtName.textContent = shirt.name;
             modalShirtDescription.textContent = shirt.description;
             modalShirtPrice.textContent = shirt.price;
+        });
+        seePageButton.addEventListener('click', function() {
+            const shirtNumber = index; // Получаем имя футболки из data-атрибута кнопки
+            const stringShirt = JSON.stringify(shirt);
+            localStorage.setItem('selectedShirt', stringShirt);
+            window.location.href = '../LR_2/index.html'; // Переходим на страницу с деталями
+            
         });
     });
 
