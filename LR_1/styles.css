@@ -52,22 +52,22 @@ body {
 .btn:hover {
     background-color: darkblue;
 }
-/* Модальное окно */
+
 .modal {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed; /* Закреплено относительно окна браузера */
-    z-index: 1; /* Отображение поверх всего остального */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Полная ширина */
-    height: 100%; /* Полная высота */
-    background-color: rgba(0, 0, 0, 0.5); /* Черный фон с прозрачностью */
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
-/* Содержимое модального окна */
+
 .modal-content {
     background-color: #fefefe;
     margin: auto;
@@ -78,7 +78,7 @@ body {
     text-align: center;
 }
 
-/* Закрывающая кнопка (X) */
+
 .close {
     color: #aaa;
     float: right;
@@ -93,7 +93,7 @@ body {
     cursor: pointer;
 }
 
-/* Изображение футболки в модальном окне */
+
 .modal-shirt-image {
     width: 100px;
     height: auto;
