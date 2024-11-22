@@ -14,7 +14,8 @@ window.onload = function() {
         shirtCard.classList.add('shirt-card');
         
         const shirtImage = document.createElement('img');
-        shirtImage.src = shirt.colors.white.front;
+        const firstColor = Object.keys(shirt.colors)[0]; 
+        shirtImage.src = shirt.colors[firstColor].front;
         shirtImage.alt = shirt.name;
         shirtImage.classList.add('shirt-image');
         shirtCard.appendChild(shirtImage);
