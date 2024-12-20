@@ -72,16 +72,6 @@ workSpace.addEventListener("mousemove", (event) => {
 workSpace.addEventListener("touchmove", (event) => {
     event.preventDefault();
     if (isDragging && holderItem) {
-        let i = 1 * itemSize.direction;
-        itemSize.newSquare = (itemSize.width + i) * (itemSize.height + i);
-        if (itemSize.newSquare >= itemSize.square * 0.5 && itemSize.newSquare <= itemSize.square * 2) {
-            itemSize.width += i;
-            itemSize.height += i;
-            holderItem.style.width = `${itemSize.width}px`;
-            holderItem.style.height = `${itemSize.height}px`;
-        } else {
-            itemSize.direction *= -1;
-        }
         holderItem.style.left = `${event.touches[0].clientX - offsetX}px`;
         holderItem.style.top = `${event.touches[0].clientY - offsetY}px`;
         if (isDragging && event.touches.length > 1) {
