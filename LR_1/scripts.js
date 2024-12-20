@@ -7,7 +7,6 @@ window.onload = function() {
     const modalShirtPrice = document.getElementById('modal-shirt-price');
     const closeModal = document.querySelector('.close');
     modal.style.display='none';
-
     shirts.forEach((shirt,index) => {
         
         const shirtCard = document.createElement('div');
